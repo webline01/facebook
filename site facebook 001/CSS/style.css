@@ -1,0 +1,370 @@
+
+/* Configuração geral */
+* {
+    box-sizing: border-box;
+}
+
+/* Configuração da página */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Adaptação para celular */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Adaptação para computador */
+@media (min-width: 601px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+
+/* Imagem de capa */
+.capa {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Painel de login */
+.painel-login {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#form-login input {
+    width: 100%;
+    height: 65px;
+    padding: 18px;
+    border: 1px solid #d5d8dc;
+    border-radius: 16px;
+    font-size: 16px;
+    background: white;
+}
+
+.entrar {
+    width: 100%;
+    height: 52px;
+    background: #0866ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.esqueceu {
+    margin-top: 26px;
+    text-align: center;
+    color: #1c1e21;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.criar {
+    margin-top: auto;
+    display: block;
+    padding: 15px;
+    border: 1.5px solid #0866ff;
+    border-radius: 30px;
+    color: #0866ff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.marca {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+
+/* Parte inferior do painel */
+
+.painel-login {
+    min-height: 100vh;
+}
+
+.painel-login .esqueceu {
+    display: block;
+    margin-top: 28px;
+    text-align: center;
+    color: #1c1e21;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.painel-login .criar {
+    display: block;
+    margin-top: auto;
+    padding: 16px;
+    border: 1.5px solid #0866ff;
+    border-radius: 35px;
+    color: #0866ff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.painel-login .marca {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 24px 0 12px;
+}
+
+.rodape-links {
+    text-align: center;
+    color: #737d8c;
+    font-size: 13px;
+}
+
+.rodape-links a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 8px;
+}
+.painel-login .criar {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 100px;
+    border: 2px solid #0866ff;
+    border-radius: 30px;
+    background: white;
+    color: #0866ff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}.painel-login button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-top: 12px;
+    background-color: #0866ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}.painel-login .marca {
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+.painel-login .rodape-links {
+    margin-bottom: 25px;
+}
+/* Painel sobre a capa no computador */
+body {
+    margin: 0;
+    position: relative;
+}
+
+.area-login {
+    position: absolute;
+    top: 45%;
+    right: 1%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 95vh;
+}
+
+.area-login iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+    scrollbar-width: none;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    .area-login {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+        height: 750px;
+    }
+}
+/* Esconder a barra somente dentro do login */
+html:has(.painel-login),
+html:has(.painel-login) body {
+    overflow-y: hidden;
+}/* COMPUTADOR */
+@media screen and (min-width: 601px) {
+
+  .area-login {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 85vh;
+  }
+
+  .area-login iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  picture {
+    display: block;
+  }
+}
+
+/* CELULAR */
+@media screen and (max-width: 600px) {
+
+  picture {
+    display: none;
+  }
+
+  .area-login {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+  }
+
+  .area-login iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}/* AJUSTE EXCLUSIVO PARA COMPUTADOR */
+@media screen and (min-width: 601px) {
+
+  picture {
+    display: block;
+  }
+
+  .capa {
+    display: block;
+    max-width: 100%;
+  }
+
+  .area-login {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 85vh;
+  }
+}
+/* Rodapé do site */
+.rodape-site {
+    width: 100%;
+    border-top: 2px solid #d5d8dc;
+    background: white;
+    padding: 22px 30px;
+    margin-top: -100px;
+    position: relative;
+}
+
+.rodape-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #737d8c;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Rodapé no celular */
+@media (max-width: 600px) {
+    .rodape-site {
+        display: none;
+    }
+}
+
+
+/* RODAPÉ DO SITE */
+.rodape-site {
+    width: 100%;
+    border-top: 1px solid #d5d8dc;
+    background: white;
+    padding: 18px 35px 25px;
+}
+
+.rodape-conteudo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #737d8c;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.rodape-conteudo p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 8px 0;
+}
+
+
+.painel-login .marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.simbolo-marca {
+    color: #0866ff;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1;
+}
+/* Subir o botão e a marca juntos */
+.painel-login .criar,
+.painel-login .marca {
+    position: relative;
+    top: -25px;
+}
+
+
+/* Esconde o rodapé interno que aparece cortado */
+@media screen and (min-width: 601px) {
+  .painel-login .rodape-links {
+    display: none;
+  }
+}
+
